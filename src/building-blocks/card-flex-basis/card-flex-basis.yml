@@ -1,0 +1,12 @@
+name: 'Card Flex Basis'
+tags:
+  - card
+category: containers
+description: Something something.
+versions:
+  - 6.3.1
+  - 6.3.0
+author:
+  github: paxperscientiam
+  name: Chris Ramos
+containerClass: container-padded row medium-5 large-3 column

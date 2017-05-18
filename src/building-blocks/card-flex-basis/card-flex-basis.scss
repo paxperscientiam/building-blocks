@@ -1,0 +1,45 @@
+$ratio-yin: 1.5;
+$ratio-yang: 0.4;
+$percent-text: 50%;
+
+@mixin flexy ($flex-g: 1, $flex-s: 1, $flex-b: auto) {
+ flex: $flex-g $flex-s $flex-b;
+}
+
+@mixin yin ($ratio) {
+ @include flexy($ratio, 1, 0);
+}
+
+@mixin yang ($ratio) {
+ @include flexy($ratio, 1, 0);
+}
+
+.card-plex {
+ @include callout;
+ background: white;
+ padding: 2rem;
+
+ & > div {
+  @include card-container;
+  box-shadow:  0px 0px 85px 8px rgba(0,0,0,0.75);;
+
+  & > div {
+   display: flex;
+   flex-direction: row;
+
+   & > .card-section.yin {
+    @include card-section;
+    @include yin($ratio-yin);
+   }
+   & > .card-section.yang {
+    @include card-section;
+    @include yang($ratio-yang);
+   }
+
+   & > .card-section.text {
+    flex: 0 1 $percent-text;
+   }
+
+  }
+ }
+}

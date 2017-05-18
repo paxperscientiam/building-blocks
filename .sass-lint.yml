@@ -86,7 +86,7 @@ rules:
   zero-unit: 1
 
   # Inner Spacing
-  space-after-comma: 1
+  space-after-comma: 2
   space-before-colon: 1
   space-after-colon: 1
   space-before-brace: 1
